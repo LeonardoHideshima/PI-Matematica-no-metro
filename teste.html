@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrô de São Paulo</title>
-    <meta name="description"
-        content="Informações sobre as linhas, horários, tarifas e mapas interativos do Metrô de São Paulo.">
-    <meta name="keywords" content="metrô, são paulo, transporte, tarifas, horários, linhas, mapa, sacomã">
-    <meta property="og:title" content="Metrô de São Paulo - Linhas, Horários e Tarifas">
-    <meta property="og:description" content="Explore as linhas, tarifas e o mapa interativo do Metrô de São Paulo.">
-    <meta property="og:image" content="images/imagem_metro.png">
+    <meta name="description" content="Informações sobre as linhas, horários e tarifas do Metrô de São Paulo.">
+    <meta name="keywords" content="metrô, são paulo, transporte, tarifas, horários, linhas, mapa">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,49 +15,40 @@
             color: #333;
             background-color: #f4f4f4;
         }
-
         header {
             background-color: #003b64;
             color: white;
             padding: 10px 0;
             text-align: center;
         }
-
         nav {
             margin: 0;
             padding: 0;
         }
-
         nav ul {
             list-style-type: none;
             padding: 0;
         }
-
         nav ul li {
             display: inline;
             margin: 0 15px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
         }
-
         nav ul li a:hover {
             text-decoration: underline;
             color: #ffcc00;
         }
-
         nav ul li a.active {
             font-weight: bold;
             border-bottom: 2px solid #ffcc00;
         }
-
         main {
             padding: 20px;
         }
-
         .line-map {
             width: 100%;
             max-width: 800px;
@@ -71,7 +56,6 @@
             margin: 20px auto;
             display: block;
         }
-
         footer {
             background-color: #003b64;
             color: white;
@@ -79,239 +63,90 @@
             padding: 10px 0;
             width: 100%;
         }
-
         section#contact a {
             color: #333;
             text-decoration: none;
             font-size: 16px;
         }
-
         section#contact a:hover {
             color: #ffcc00;
         }
-
         section#contact i {
             font-size: 24px;
             margin-right: 8px;
         }
-
         @media (max-width: 768px) {
             nav ul li {
                 display: block;
                 margin: 10px 0;
                 text-align: center;
             }
-
             main {
                 padding: 10px;
             }
         }
-
         html {
             scroll-behavior: smooth;
         }
-
-        .carousel {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 20px auto;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        table {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: white;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #003b64;
-            color: white;
-        }
-
-        th,
-        td {
-            padding: 10px;
-        }
-
-        details {
-            margin-bottom: 10px;
-        }
-
-        #map {
-            height: 400px;
-            width: 100%;
-            margin: 20px 0;
-        }
-
-        .hamburger {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            .hamburger {
-                display: block;
-                background-color: #003b64;
-                color: white;
-                font-size: 24px;
-                cursor: pointer;
-                padding: 10px;
-                text-align: center;
-            }
-        }
     </style>
 </head>
-
 <body>
     <header>
         <h1>Metrô de São Paulo</h1>
-        <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#lines">Linhas</a></li>
+                <li><a href="#schedule">Horários</a></li>
                 <li><a href="#fares">Tarifas</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li><a href="#interactive-map">Mapa Interativo</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#feedback">Feedback</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section id="home">
+            <h2>Bem-vindo ao Metrô de São Paulo</h2>
+            <p>Saiba sobre o projeto Mátemática no metrô.</p>
+            <p></p>
+        </section>
+
         <section id="sobre">
-            <h2>Sobre o Projeto</h2>
-            <p>Nesta semana, a estação Sacomã, da Linha 2-Verde, torna-se sala de aula, com o início do projeto “Resolva
-                aqui suas dúvidas de matemática”, uma parceria entre o Instituto de Engenharia de São Paulo e o Metrô
-                Social, com o apoio do Instituto Mauá de Tecnologia.</p>
-            <p>A atividade consiste em proporcionar aos estudantes do ensino médio e passageiros do transporte
-                metropolitano, aulas gratuitas, ministradas por alunos do primeiro ano de engenharia da Escola de
-                Engenharia Mauá, que desempenharão essa função como voluntários.</p>
-            <p>Começando nesta segunda-feira (23), das 14h às 20h, a ação será realizada semanalmente, às
-                segundas-feiras, exceto em feriados, até o dia 28 de outubro de 2024.</p>
-            <p>O projeto foi inicialmente implementado nas estações da Linha 4-Amarela do metrô de São Paulo, incluindo
-                as estações Luz, República, Paulista, Faria Lima e Butantã.</p>
-            <img src="images/mat_metro.jpg"
-                alt="Imagem do projeto de aulas de matemática na estação Sacomã, com alunos interagindo"
-                style="width:100%; height:auto;">
+            <h2>Saiba sobre</h2>
+            <p>Nesta semana, a estação Sacomã, da Linha 2-Verde, torna-se sala de aula, com o início do projeto “Resolva aqui suas dúvidas de matemática”, uma parceria entre o Instituto de Engenharia de São Paulo e o Metrô Social, com o apoio do Instituto Mauá de Tecnologia.</p>
+            <p>A atividade consiste em proporcionar aos estudantes do ensino médio e passageiros do transporte metropolitano, aulas gratuitas, ministradas por alunos do primeiro ano de engenharia da Escola de Engenharia Mauá, que desempenharão essa função como voluntários.</p>
+            <p>Começando nesta segunda-feira (23), das 14h às 20h a ação será realizada semanalmente, às segundas-feiras, a exceção de feriados, até o dia 28 de outubro de 2024.</p>
+            <img src="mat_metro.jpg" alt="Imagem do projeto" height="600px" width="700px">
         </section>
 
         <section id="lines">
             <h2>Linhas do Metrô</h2>
-            <img src="images/imagem_metro.png"
-                alt="Mapa detalhado das linhas do Metrô de São Paulo, mostrando as conexões entre as linhas azul, verde, vermelha, amarela e lilás."
-                class="line-map">
+            <img src="imagem_metro.png" alt="Mapa das linhas do Metrô de São Paulo com estações e conexões entre as linhas azul, verde, vermelha, amarela, e lilás." class="line-map">
             <p>Descubra as linhas disponíveis no Metrô de São Paulo e as estações que cada uma cobre.</p>
+        </section>
+
+        <section id="schedule">
+            <h2>Horários</h2>
+            <p>Confira os horários de funcionamento das linhas do Metrô de São Paulo, incluindo as primeiras e últimas partidas.</p>
         </section>
 
         <section id="fares">
             <h2>Tarifas</h2>
-            <p>Veja as tarifas atualizadas para viagens no Metrô de São Paulo. Tarifas especiais estão disponíveis para
-                estudantes e idosos.</p>
+            <p>Veja as tarifas atualizadas para viagens no Metrô de São Paulo. Tarifas especiais estão disponíveis para estudantes e idosos.</p>
         </section>
 
         <section id="contact">
             <h2>Contato</h2>
-            <p>Para mais informações, entre em contato pelo telefone <a href="tel:+55110800-7707722">(11)
-                    0800-7707722</a> ou envie um e-mail para <a
-                    href="mailto:contato@metrosp.com.br">contato@metrosp.com.br</a>.</p>
-            <p>Siga-nos no <a href="https://www.instagram.com/metrospoficial/" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a></p>
-        </section>
-
-        <section id="interactive-map">
-            <h2>Mapa Interativo</h2>
-            <div id="map"></div>
-            <p>Clique no marcador no mapa para ver informações detalhadas sobre a Estação Sacomã.</p>
-        </section>
-
-        <section id="faq">
-            <h2>Perguntas Frequentes (FAQ)</h2>
-            <details>
-                <summary>Qual o horário de funcionamento do Metrô de São Paulo?</summary>
-                <p>O Metrô de São Paulo opera das 4h40 até a meia-noite, de segunda a sábado, e das 4h40 até 1h aos
-                    domingos e feriados.</p>
-            </details>
-            <details>
-                <summary>Como posso recarregar meu bilhete único?</summary>
-                <p>Você pode recarregar seu bilhete único em qualquer estação do metrô, em terminais de autoatendimento
-                    ou online pelo site oficial.</p>
-            </details>
-        </section>
-
-        <section id="feedback">
-            <h2>Comentários e Avaliações</h2>
-            <form action="process_feedback.php" method="post">
-                <label for="name">Nome:</label><br>
-                <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br>
-                <label for="message">Mensagem:</label><br>
-                <textarea id="message" name="message" placeholder="Deixe seus comentários" rows="4"
-                    required></textarea><br><br>
-                <input type="submit" value="Enviar">
-            </form>
+            <p>Para mais informações, entre em contato pelo telefone <a href="tel:+55110800-7707722">(11) 0800-7707722</a> ou envie um e-mail para <a href="mailto:contato@metrosp.com.br">contato@metrosp.com.br</a>.</p>
+            <p>Siga-nos no <a href="https://www.instagram.com/metrospoficial/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> Instagram
+            </a></p>
         </section>
     </main>
 
     <footer>
-        <p>Metrô de São Paulo © 2024 - Todos os direitos reservados.</p>
+        <p>&copy; 2024 Metrô de São Paulo. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        function toggleMenu() {
-            var nav = document.querySelector('nav ul');
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'block';
-            }
-        }
-
-        var map = L.map('map').setView([-23.5864, -46.6205], 16);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-        var marker = L.marker([-23.5864, -46.6205]).addTo(map)
-            .bindPopup('<b>Estação Sacomã</b><br />Linha 2-Verde').openPopup();
-    </script>
 </body>
-
 </html>
-
-<!-- Página de contato e do formulário -->
-<!-- <nav>
-    <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="comentarios.html" target="_blank">Comentários</a></li> 
-        <li><a href="contato.html" target="_blank">Contato</a></li> 
-        <li><a href="#interactive-map">Mapa Interativo</a></li>
-        <li><a href="#faq">FAQ</a></li>
-    </ul>
-</nav> -->

@@ -159,16 +159,7 @@ body.deuteranopia {
     filter: url(#deuteranopia);
 }
 
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-span {
+body,p,h1,h2,h3,h4,h5,h6,a,span {
     font-size: 16px;
 }
 

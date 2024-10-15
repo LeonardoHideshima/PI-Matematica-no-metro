@@ -1,0 +1,49 @@
+
+.notification-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    width: 350px;
+}
+
+.notification-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.notification-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notification-container button:hover {
+    background-color: #0056b3;
+}
+
+.notification-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.notification-container a:hover {
+    text-decoration: underline;
+}
+
+/* Esconde a notificação */
+.hidden {
+    display: none;
+}

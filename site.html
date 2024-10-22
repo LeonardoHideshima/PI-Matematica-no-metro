@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="carrossel/carrosel.css">
+    
 </head>
 
 <body>
@@ -23,14 +25,12 @@
         <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#lines">Linhas</a></li>
-                <li><a href="#fares">Tarifas</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a href="#interactive-map">Mapa Interativo</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="paginas/linhas.html" target="_blank">Linhas</a></li> 
+                <li><a href="paginas/tarifas.html" target="_blank">Tarifas</a></li> 
+                <li><a href="paginas/contato.html" target="_blank">Contato</a></li> 
+                <li><a href="paginas/mapa_interativo.html" target="_blank">Mapa Interativo</a></li> 
+                <li><a href="paginas/faq.html" target="_blank">FAQ</a></li> 
+                <li><a href="paginas/feedback.html" target="_blank">Feedback</a></li> 
             </ul>
         </nav>
     </header>
@@ -60,9 +60,33 @@
                 segundas-feiras, exceto em feriados, até o dia 28 de outubro de 2024.</p>
             <p>O projeto foi inicialmente implementado nas estações da Linha 4-Amarela do metrô de São Paulo, incluindo
                 as estações Luz, República, Paulista, Faria Lima e Butantã.</p>
-            <img src="images/mat_metro.jpg"
-                alt="Imagem do projeto de aulas de matemática na estação Sacomã, com alunos interagindo"
-                style="width:100%; height:auto;">
+
+                <div class="carrossel-container">
+                    <div class="carrossel-images">
+                        <img src="images/mat_metro.jpg" alt="Imagem 1" 
+                        style="width:100%; height:auto">
+                        <img src="images/mario1.jpg" alt="Imagem 2" 
+                        style="width:100%; height:auto">
+                        <img src="images/mario2.png" alt="Imagem 3" 
+                        style="width:100%; height:auto">
+                        <img src="images/mario3.webp" alt="Imagem 4" 
+                        style="width:100%; height:auto">
+                    </div>
+            
+                 
+                    <button class="carrossel-prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="carrossel-next" onclick="changeSlide(1)">&#10095;</button>
+            
+                  
+                    <div class="carrossel-indicators">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            
+                <script src="carrossel/carrossel.js"></script>
         </section>
 
         <section id="lines">
@@ -167,6 +191,9 @@
             </defs>
         </svg>
     </main>
+
+    
+
     <iframe src="notificacao/notificacao.html" style="width: 100%; height: 200px; border: none;"></iframe>
 
     <footer>

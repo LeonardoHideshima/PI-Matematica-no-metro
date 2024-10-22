@@ -1,7 +1,11 @@
+.body {
+    position: relative; 
+}
+
 .notification-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
     background-color: #f1f1f1;
     padding: 15px;
     border-radius: 10px;
@@ -11,8 +15,8 @@
     justify-content: space-between;
     z-index: 1000;
     width: 350px;
-    border-color: #003b64;
-    border-radius: 10%;
+    border: 1px solid #003b64; 
+    border-radius: 10%; 
 }
 
 .notification-container p {
@@ -45,5 +49,6 @@
 }
 
 .hidden {
-    display: none;
+    display: none; 
 }
+

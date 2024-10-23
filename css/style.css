@@ -97,14 +97,14 @@ html {
     scroll-behavior: smooth;
 }
 
-.carrossel {
+.carousel {
     width: 100%;
     max-width: 800px;
     height: auto;
     margin: 20px auto;
 }
 
-.carrossel img {
+.carousel img {
     width: 100%;
     height: auto;
     display: block;

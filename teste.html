@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrô de São Paulo</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <meta name="description"
-        content="Informações sobre as linhas, horários, tarifas e mapas interativos do Metrô de São Paulo.">
+    <meta name="description" content="Informações sobre as linhas, horários, tarifas e mapas interativos do Metrô de São Paulo.">
     <meta name="keywords" content="metrô, são paulo, transporte, tarifas, horários, linhas, mapa, sacomã">
     <meta property="og:title" content="Metrô de São Paulo - Linhas, Horários e Tarifas">
     <meta property="og:description" content="Explore as linhas, tarifas e o mapa interativo do Metrô de São Paulo.">
@@ -15,8 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="carrossel/carrosel.css">
-    
 </head>
 
 <body>
@@ -25,12 +22,12 @@
         <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
         <nav>
             <ul>
-                <li><a href="paginas/linhas.html">Linhas</a></li> 
-                <li><a href="paginas/tarifas.html">Tarifas</a></li> 
-                <li><a href="paginas/contato.html">Contato</a></li> 
-                <li><a href="paginas/mapa_interativo.html">Mapa Interativo</a></li> 
-                <li><a href="paginas/faq.html">FAQ</a></li> 
-                <li><a href="paginas/feedback.html">Feedback</a></li> 
+                <li><a href="paginas/linhas.html">Linhas</a></li> <!-- Abre na mesma aba -->
+                <li><a href="paginas/tarifas.html">Tarifas</a></li> <!-- Abre na mesma aba -->
+                <li><a href="paginas/contato.html">Contato</a></li> <!-- Abre na mesma aba -->
+                <li><a href="paginas/mapa_interativo.html">Mapa Interativo</a></li> <!-- Abre na mesma aba -->
+                <li><a href="paginas/faq.html">FAQ</a></li> <!-- Abre na mesma aba -->
+                <li><a href="paginas/feedback.html">Feedback</a></li> <!-- Abre na mesma aba -->
             </ul>
         </nav>
     </header>
@@ -47,79 +44,29 @@
                     <option value="tritanopia">Tritanopia</option>
                 </select>
             </div>
-            <div vw class="enabled">
-                <div vw-access-button class="active"></div>
-                <div vw-plugin-wrapper>
-                    <div class="vw-plugin-top-wrapper"></div>
-                </div>
-            </div>
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-            <script>
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-            </script>
         </section>
         <section id="sobre">
-            <h2>Sobre o Projeto</h2>
-            <p>Nesta semana, a estação Sacomã, da Linha 2-Verde, torna-se sala de aula, com o início do projeto “Resolva
-                aqui suas dúvidas de matemática”, uma parceria entre o Instituto de Engenharia de São Paulo e o Metrô
-                Social, com o apoio do Instituto Mauá de Tecnologia.</p>
-            <p>A atividade consiste em proporcionar aos estudantes do ensino médio e passageiros do transporte
-                metropolitano, aulas gratuitas, ministradas por alunos do primeiro ano de engenharia da Escola de
-                Engenharia Mauá, que desempenharão essa função como voluntários.</p>
-            <p>Começando nesta segunda-feira (23), das 14h às 20h, a ação será realizada semanalmente, às
-                segundas-feiras, exceto em feriados, até o dia 28 de outubro de 2024.</p>
-            <p>O projeto foi inicialmente implementado nas estações da Linha 4-Amarela do metrô de São Paulo, incluindo
-                as estações Luz, República, Paulista, Faria Lima e Butantã.</p>
-
-                <div class="carrossel-container">
-                    <div class="carrossel-images">
-                        <img src="images/mat_metro.jpg" alt="Imagem 1" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario1.jpg" alt="Imagem 2" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario2.png" alt="Imagem 3" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario3.webp" alt="Imagem 4" 
-                        style="width:100%; height:auto">
-                    </div>
-            
-                 
-                    <button class="carrossel-prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="carrossel-next" onclick="changeSlide(1)">&#10095;</button>
-            
-                  
-                    <div class="carrossel-indicators">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                    </div>
-                </div>
-            
-                <script src="carrossel/carrossel.js"></script>
+            <h2>Metrô de São Paulo promove aulas gratuitas de matemática</h2>
+            <p>O projeto "Matemática no Metrô" é uma iniciativa educativa desenvolvida em São Paulo, fruto de uma parceria entre o Instituto de Engenharia de São Paulo, o Metrô Social e o Instituto Mauá de Tecnologia...</p>
+            <!-- Conteúdo do projeto omitido para brevidade -->
+            <img src="images/mat_metro.jpg" alt="Imagem do projeto de aulas de matemática na estação Sacomã, com alunos interagindo" style="width:100%; height:auto;">
         </section>
 
         <section id="lines">
             <h2>Linhas do Metrô</h2>
-            <img src="images/imagem_metro.png"
-                alt="Mapa detalhado das linhas do Metrô de São Paulo, mostrando as conexões entre as linhas azul, verde, vermelha, amarela e lilás."
-                class="line-map">
+            <img src="images/imagem_metro.png" alt="Mapa detalhado das linhas do Metrô de São Paulo, mostrando as conexões entre as linhas azul, verde, vermelha, amarela e lilás." class="line-map">
             <p>Descubra as linhas disponíveis no Metrô de São Paulo e as estações que cada uma cobre.</p>
         </section>
 
         <section id="fares">
             <h2>Tarifas</h2>
-            <p>Veja as tarifas atualizadas para viagens no Metrô de São Paulo. Tarifas especiais estão disponíveis para
-                estudantes e idosos.</p>
+            <p>Veja as tarifas atualizadas para viagens no Metrô de São Paulo. Tarifas especiais estão disponíveis para estudantes e idosos.</p>
         </section>
 
         <section id="contact">
             <h2>Contato</h2>
-            <p>Para mais informações, entre em contato pelo telefone <a href="tel:+55110800-7707722">(11)
-                    0800-7707722</a> ou envie um e-mail para <a
-                    href="mailto:contato@metrosp.com.br">contato@metrosp.com.br</a>.</p>
-            <p>Siga-nos no <a href="https://www.instagram.com/metrospoficial/" target="_blank"
-                    rel="noopener noreferrer">
+            <p>Para mais informações, entre em contato pelo telefone <a href="tel:+55110800-7707722">(11) 0800-7707722</a> ou envie um e-mail para <a href="mailto:contato@metrosp.com.br">contato@metrosp.com.br</a>.</p>
+            <p>Siga-nos no <a href="https://www.instagram.com/metrospoficial/" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i> Instagram
                 </a></p>
         </section>
@@ -134,13 +81,11 @@
             <h2>Perguntas Frequentes (FAQ)</h2>
             <details>
                 <summary>Qual o horário de funcionamento do Metrô de São Paulo?</summary>
-                <p>O Metrô de São Paulo opera das 4h40 até a meia-noite, de segunda a sábado, e das 4h40 até 1h aos
-                    domingos e feriados.</p>
+                <p>O Metrô de São Paulo opera das 4h40 até a meia-noite, de segunda a sábado, e das 4h40 até 1h aos domingos e feriados.</p>
             </details>
             <details>
                 <summary>Como posso recarregar meu bilhete único?</summary>
-                <p>Você pode recarregar seu bilhete único em qualquer estação do metrô, em terminais de autoatendimento
-                    ou online pelo site oficial.</p>
+                <p>Você pode recarregar seu bilhete único em qualquer estação do metrô, em terminais de autoatendimento ou online pelo site oficial.</p>
             </details>
         </section>
 
@@ -152,8 +97,7 @@
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br>
                 <label for="message">Mensagem:</label><br>
-                <textarea id="message" name="message" placeholder="Deixe seus comentários" rows="4"
-                    required></textarea><br><br>
+                <textarea id="message" name="message" placeholder="Deixe seus comentários" rows="4" required></textarea><br><br>
                 <input type="submit" value="Enviar">
             </form>
         </section>
@@ -188,22 +132,17 @@
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
             <defs>
                 <filter id="protanopia">
-                    <feColorMatrix type="matrix"
-                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                    <feColorMatrix type="matrix" values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
                 </filter>
                 <filter id="deuteranopia">
                     <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
                 </filter>
                 <filter id="tritanopia">
-                    <feColorMatrix type="matrix"
-                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                    <feColorMatrix type="matrix" values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
                 </filter>
             </defs>
         </svg>
     </main>
-
-    
-
     <iframe src="notificacao/notificacao.html" style="width: 100%; height: 200px; border: none;"></iframe>
 
     <footer>

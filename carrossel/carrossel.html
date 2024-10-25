@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="carrossel/carrosel.css">
+</head>
+<body>
+    <div class="carrossel-container">
+        <div class="carrossel-images">
+            <img src="images/mat_metro.jpg" alt="Imagem 1" 
+            style="width:100%; height:auto">
+            <img src="images/mario1.jpg" alt="Imagem 2" 
+            style="width:100%; height:auto">
+            <img src="images/mario2.png" alt="Imagem 3" 
+            style="width:100%; height:auto">
+            <img src="images/mario3.webp" alt="Imagem 4" 
+            style="width:100%; height:auto">
+        </div>
+
+     
+        <button class="carrossel-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carrossel-next" onclick="changeSlide(1)">&#10095;</button>
+
+      
+        <div class="carrossel-indicators">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <script src="carrossel/carrossel.js"></script>
+</body>
+</html>

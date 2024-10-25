@@ -1,0 +1,54 @@
+.body {
+    position: relative; 
+}
+
+.notification-container {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 12px rgba(0.5, 0.5, 0.5, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 350px;
+    border: 1px solid #003b64; 
+    border-radius: 10%; 
+}
+
+.notification-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.notification-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notification-container button:hover {
+    background-color: #0056b3;
+}
+
+.notification-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.notification-container a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none; 
+}
+

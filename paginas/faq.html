@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <title>Tarifas do Metrô</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; /* Alterado para um tom de cinza suave */
+        }
+        
+        header {
+            background-color: #004080; /* Um azul mais forte, adequado ao tema "Metrô" */
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+    
+        h1 {
+            background-color: #003b64;
+                padding: 20px;
+                text-align: center;
+                color: white;
+        }
+    
+        .highlight {
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1.2em; /* Tamanho de fonte levemente maior */
+            color: #333;
+        }
+            
+    
+    
+        section#contact {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        section#contact h2 {
+            color: #004080;
+            margin-bottom: 15px;
+        }
+    
+        section#contact p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    
+        section#contact a {
+            color: #007acc; /* Azul mais vivo para links */
+            text-decoration: none;
+        }
+    
+        section#contact a:hover {
+            text-decoration: underline;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    
+        .box {
+            background-color: white;
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            flex-basis: 45%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+           </style>
+</head>
+<body>
+    <h1>Tarifas do Metrô de São Paulo</h1>
+    <section id="faq">
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <details>
+            <summary>Qual o horário de funcionamento do Metrô de São Paulo?</summary>
+            <p>O Metrô de São Paulo opera das 4h40 até a meia-noite, de segunda a sábado, e das 4h40 até 1h aos
+                domingos e feriados.</p>
+        </details>
+        <details>
+            <summary>Como posso recarregar meu bilhete único?</summary>
+            <p>Você pode recarregar seu bilhete único em qualquer estação do metrô, em terminais de autoatendimento
+                ou online pelo site oficial.</p>
+        </details>
+        <h2>Exemplos de perguntas de Matemática</h2>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Perguntas de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FAQ - Perguntas de Matemática</h1>
+    </header>
+
+    <main>
+        <section class="faq-section">
+        
+            <div id="perguntas-container"></div>
+        </section>
+    </main>
+
+    <script>
+        const perguntas = [
+            { pergunta: "Qual é o resultado de 2 + 2?", respostaCorreta: 4 },
+            { pergunta: "Qual é a raiz quadrada de 81?", respostaCorreta: 9 },
+            { pergunta: "Resolva: 12 x 12", respostaCorreta: 144 },
+            { pergunta: "Qual é o valor de π (pi) arredondado para duas casas decimais?", respostaCorreta: 3.14 },
+            { pergunta: "Qual é o valor de 2^10?", respostaCorreta: 1024 },
+            { pergunta: "Resolva: 7 + 3 x (10 ÷ 2)", respostaCorreta: 22 },
+            { pergunta: "Qual é a derivada de x^2?", respostaCorreta: 2 }, // Derivada básica de x^2
+            { pergunta: "Qual é o logaritmo de 1000 na base 10?", respostaCorreta: 3 },
+            { pergunta: "Resolva: 5! (fatorial de 5)", respostaCorreta: 120 },
+        ];
+
+        function carregarPerguntas() {
+            const container = document.getElementById('perguntas-container');
+
+            perguntas.forEach((pergunta, index) => {
+                const div = document.createElement('div');
+                div.classList.add('faq-item');
+                div.innerHTML = `
+                    <p>${pergunta.pergunta}</p>
+                    <input type="number" id="resposta-${index}" placeholder="Digite sua resposta">
+                    <button onclick="verificarResposta(${index})">Verificar Resposta</button>
+                    <p id="resultado-${index}"></p>
+                `;
+                container.appendChild(div);
+            });
+        }
+        function verificarResposta(indice) {
+            const respostaUsuario = parseFloat(document.getElementById(`resposta-${indice}`).value);
+            const respostaCorreta = perguntas[indice].respostaCorreta;
+            
+            const resultadoDiv = document.getElementById(`resultado-${indice}`);
+
+            if (respostaUsuario === respostaCorreta) {
+                resultadoDiv.innerText = "Resposta correta!";
+            } else {
+                resultadoDiv.innerText = "Resposta incorreta. A resposta correta é " + respostaCorreta + ".";
+            }
+        }
+
+        window.onload = carregarPerguntas;
+    </script>
+</body>
+
+</html>
+
+    </section>
+</body>
+</html>

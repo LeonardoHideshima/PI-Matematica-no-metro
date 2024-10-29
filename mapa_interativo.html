@@ -3,86 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
     <title>Tarifas do Metrô</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0e0e0; /* Alterado para um tom de cinza suave */
-        }
-        
-        header {
-            background-color: #004080; /* Um azul mais forte, adequado ao tema "Metrô" */
-            padding: 15px;
-            text-align: center;
-            color: white;
-        }
-    
-        h1 {
-            background-color: #003b64;
-                padding: 20px;
-                text-align: center;
-                color: white;
-        }
-    
-        .highlight {
-            font-weight: bold;
-            text-align: center;
-            margin: 10px 0;
-            font-size: 1.2em; /* Tamanho de fonte levemente maior */
-            color: #333;
-        }
-            
-    
-    
-        section#contact {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    
-        section#contact h2 {
-            color: #004080;
-            margin-bottom: 15px;
-        }
-    
-        section#contact p {
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-    
-        section#contact a {
-            color: #007acc; /* Azul mais vivo para links */
-            text-decoration: none;
-        }
-    
-        section#contact a:hover {
-            text-decoration: underline;
-        }
-    
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-    
-        .box {
-            background-color: white;
-            border: 1px solid #ccc; 
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px;
-            flex-basis: 45%;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    
-           </style>
 </head>
+<header>
+    <h1>Metrô de São Paulo</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+    <nav>
+        <ul>
+            <li><a href="site.html"><img src="home.png" alt="Home"></a></li> 
+            <li><a href="linhas.html">Linhas</a></li> 
+            <li><a href="tarifas.html">Tarifas</a></li> 
+            <li><a href="mapa_interativo.html">Mapa Interativo</a></li> 
+            <li><a href="abaCuriosidades.html">Curiosidades</a></li>
+            <li><a href="faq.html">FAQ</a></li> 
+            <li><a href="feedback.html">Feedback</a></li> 
+            <li><a href="contato.html">Contato</a></li> 
+        </ul>
+    </nav>
+</header>
 <body>
     <h1>Mapa Interativo</h1>
     <p class="highlight">Informações sobre mapa no Metrô de São Paulo.</p>
@@ -107,7 +48,7 @@
 
     <script>
         function initMap() {
-            var sacoma = { lat: -23.5895, lng: -46.5913 }; // Coordenadas da Estação Sacomã
+            var sacoma = { lat: -23.5895, lng: -46.5913 }; 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 14,
                 center: sacoma
@@ -116,21 +57,21 @@
             var service = new google.maps.places.PlacesService(map);
             var request = {
                 location: sacoma,
-                radius: '2000', // Raio de 2000 metros
-                type: ['subway_station'] // Filtra apenas estações de metrô
+                radius: '2000', 
+                type: ['subway_station'] 
             };
 
             service.nearbySearch(request, function(results, status) {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     let statusHTML = '<h3>Estações Encontradas:</h3>';
                     results.forEach(station => {
-                        // Exibe marcador no mapa para cada estação
+                       
                         new google.maps.Marker({
                             position: station.geometry.location,
                             map: map,
                             title: station.name
                         });
-                        // Adiciona informações no div
+                        
                         statusHTML += `<p>Estação: ${station.name} - Endereço: ${station.vicinity}</p>`;
                     });
                     document.getElementById('status-metro').innerHTML = statusHTML;
@@ -140,13 +81,13 @@
             });
         }
 
-        // Inicializa o mapa ao carregar a página
+      
         window.onload = initMap;
     </script>
     
 
     <style>
-        /* Estilos para os temas */
+       
         .tema-escuro {
             background-color: #333;
             color: white;

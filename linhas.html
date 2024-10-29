@@ -3,38 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Sobre o Metrô de São Paulo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0e0e0; /* Alterado para um tom de cinza suave */
-        }
-        
-        header {
-            background-color: #004080; /* Um azul mais forte, adequado ao tema "Metrô" */
-            padding: 15px;
-            text-align: center;
-            color: white;
-        }
-    
-        h1 {
-            background-color: #003b64;
-                padding: 20px;
-                text-align: center;
-                color: white;
-        }
     
         .highlight {
             font-weight: bold;
             text-align: center;
             margin: 10px 0;
-            font-size: 1.2em; /* Tamanho de fonte levemente maior */
-            color: #333;
-        }
+            font-size: 1.2em; 
             
-    
+        }
+
+        h2 {
+            background-color: #003b64;
+                padding: 20px;
+                text-align: center;
+                color: white;
+        }    
     
         section#contact {
             margin: 20px;
@@ -55,7 +42,7 @@
         }
     
         section#contact a {
-            color: #007acc; /* Azul mais vivo para links */
+            color: #007acc; 
             text-decoration: none;
         }
     
@@ -78,19 +65,32 @@
             flex-basis: 45%;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-    
-           </style>
-    <title>Sobre o Metrô de São Paulo</title>
+    </style>
 </head>
+<header>
+    <h1>Metrô de São Paulo</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+    <nav>
+        <ul>
+            <li><a href="site.html"><img src="home.png" alt="Home"></a></li> 
+            <li><a href="linhas.html">Linhas</a></li> 
+            <li><a href="tarifas.html">Tarifas</a></li> 
+            <li><a href="mapa_interativo.html">Mapa Interativo</a></li> 
+            <li><a href="abaCuriosidades.html">Curiosidades</a></li>
+            <li><a href="faq.html">FAQ</a></li> 
+            <li><a href="feedback.html">Feedback</a></li> 
+            <li><a href="contato.html">Contato</a></li> 
+        </ul>
+    </nav>
+</header>
 <body>
-    <h1>Sobre o Metrô de São Paulo</h1>
-    <p class="highlight">Esta é a página "linhas", com informações sobre o Metrô de São Paulo.</p>
+    <p class="highlight">Linhas do Metrô</p>
     <section id="lines">
-        <h2>Linhas do Metrô</h2>
-        <img src="images/imagem_metro.png"
+        
+        <img src="imagem_metro.png"
             alt="Mapa detalhado das linhas do Metrô de São Paulo, mostrando as conexões entre as linhas azul, verde, vermelha, amarela e lilás."
             class="line-map">
-        <p>Descubra as linhas disponíveis no Metrô de São Paulo e as estações que cada uma cobre.</p>
+        <h2 class="highlight">Descubra as linhas disponíveis no Metrô de São Paulo e as estações que cada uma cobre.</h2>
     </section>
     <p>1. Linha Azul (Linha 1)
         Cor: Azul
@@ -189,9 +189,9 @@
                     const request = {
                         origin: origem,
                         destination: destino,
-                        travelMode: 'TRANSIT', // Modo de transporte: Transporte público (metrô)
+                        travelMode: 'TRANSIT', 
                         transitOptions: {
-                            modes: ['SUBWAY'] // Filtra para apenas metrô
+                            modes: ['SUBWAY'] 
                         }
                     };
         
@@ -204,11 +204,46 @@
                     });
                 }
         
-                // Inicializa o mapa ao carregar a página
                 window.onload = initMap;
             </script>
         </body>
         </html>
-            
+        <footer style="background-color: #003b64; color: #fff; padding: 40px 0;">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+        
+                <div style="text-align: left; margin-right: 50px;" class="col-4 text-center">
+                    <img src="logo-IMT.png" alt="Logo Mauá" style="width: 110px; height: 80px; margin-left: -95px; margin-top: 5px; object-fit: contain;"><br>
+                    <img src="metro4.png" alt="Logo Metro" style="width: 160px; height: 120px; margin-left: -95px; margin-top: 5px; object-fit: contain;"><br>
+                    <img src="int_eng.webp" alt="Instituto de Engenharia" style="width: 73px; height: 150px; margin-left: -95px; margin-top: -18px; object-fit: contain;"><br> 
+                </div>
+                
+                <div style="flex: 1; min-width: 200px; padding-block: 50px; margin-top: 0px;" class="col-4 text-center">
+                    <h3 style="text-align: justify; color: #ffcc00; margin-top: -9px;" color: #ffcc00; ">Instituto Mauá de Tecnologia</h3>
+                    <p style="text-align:justify;">Rua Bom Pastor, 3000 -São Paulo- SP</p>
+                    <p style="text-align: justify;">Horário de Funcionamento: 16:00 às 19:30</p>
+                    <p style="text-align: justify;">CEP: 04203-003</p>
+                </div>
+         
+                <div style="flex: 2 min-width 200px; padding-block: 50px; margin-top: -9px;" class="col-4 text-center"> 
+                    <h4 style="text-align:center; color: #ffcc00;">Contato</h4>
+                    <p style="text-align:justify;">
+                        <img src="telefone.png" alt="Ícone Telefone" style="width: 65px; height: 65px; vertical-align: auto; margin-right: 0px;">
+                        Telefone: (11) 0800-7707722
+                    </p>
+                    <p style="text-align: justify;">
+                        <img src="email.png" alt="Ícone Email" style="width: 65px; height: 65px; vertical-align: middle; margin-right: 0px;">
+                        E-mail: contato@metrosp.com.br
+                    </p>
+                    <p style="text-align: justify;">
+                        <img src="/instagram.png " alt="Ícone Instagram" style="width: 65px; height: 65px; vertical-align: middle; margin-right: 0px;">
+                        <a href="https://www.instagram.com/matematica_no_metro/" style="color: #fff; text-decoration: none;">Instagram</a>
+                    </p>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 10px; border-top: 1px solid #ffffff; margin-top: 10px;">
+                <p>&copy; 2024 Instituto Mauá de Tecnologia. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+         
 </body>
 </html>

@@ -8,16 +8,16 @@
 
 .carousel-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Suavidade no deslizar */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .carrossel-images img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Imagem ajusta-se ao contêiner */
+    object-fit: cover; 
 }
 
-/* Flexbox para controle de imagens no carrossel */
+
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -38,10 +38,10 @@
 }
 
 .carrossel-prev:hover, .carrossel-next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Escurecer ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-/* Posicionamento das setas */
+
 .carrossel-prev {
     left: 0;
 }
@@ -50,7 +50,7 @@
     right: 0;
 }
 
-/* Indicadores de progresso (bolinhas) */
+
 .carrossel-indicators {
     position: absolute;
     bottom: 10px;
@@ -70,24 +70,24 @@
     transition: background-color 0.3s ease;
 }
 
-/* Bolinhas ativas e efeito hover */
+
 .active, .dot:hover {
     background-color: #717171;
 }
 
-/* Animação de fade nas imagens */
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-/* Animação para efeito de fade */
+
 @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
 }
 
-/* Responsividade para telas menores */
+
 @media (max-width: 768px) {
     .carrossel-prev, .carrossel-next {
         font-size: 14px;

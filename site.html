@@ -27,13 +27,13 @@
         <nav>
             <ul>
                 <li><a href="site.html"><img src="images/home.png" alt="Home"></a></li> 
-                <li><a href="paginas/linhas.html">Linhas</a></li> 
-                <li><a href="tarifas.html">Tarifas</a></li> 
+                <li><a href="paginas/linhas.html">Linhas</a></li>  
                 <li><a href="paginas/mapa_interativo.html">Mapa Interativo</a></li> 
                 <li><a href="paginas/abaCuriosidades.html">Curiosidades</a></li>
                 <li><a href="paginas/faq.html">FAQ</a></li> 
                 <li><a href="paginas/feedback.html">Feedback</a></li> 
                 <li><a href="paginas/contato.html">Contato</a></li> 
+                <li><a href="paginas/login.html">Entrar</a></li>
             </ul>
         </nav>
     </header>
@@ -61,6 +61,17 @@
                 new window.VLibras.Widget('https://vlibras.gov.br/app');
             </script>
         </section>
+     
+            <div class="carrossel">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+               
+            </div>
+    
+        <script src="carrossel/carrossel.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <section id="sobre">
             <h2>Sobre o Projeto</h2>
             <p>O projeto "Matemática no Metrô" é uma iniciativa educativa, desenvolvida no estado de  São Paulo, fruto de uma parceria entre o Metrô Social, Instituto de Engenharia de São Paulo e o Instituto Mauá de Tecnologia. 
@@ -75,35 +86,7 @@
                             <p>O projeto foi inicialmente implementado nas estações das Linhas 4-Amarela do Metrô de São Paulo, Luz, República, Paulista, Faria Lima e Butantã localizadas em SP.</p>
                 
                 <p>No geral, o projeto utiliza as estações e os vagões do metrô como plataformas educativas, exibindo cartazes, painéis interativos e atividades relacionadas a diversos tópicos matemáticos, como geometria, aritmética, estatística, probabilidade e outros. Alguns exemplos de atividades incluem:</p>
-                
-
-                <div class="carrossel-container">
-                    <div class="carrossel-images">
-                        <img src="images/mat_metro.jpg" alt="Imagem 1" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario1.jpg" alt="Imagem 2" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario2.png" alt="Imagem 3" 
-                        style="width:100%; height:auto">
-                        <img src="images/mario3.webp" alt="Imagem 4" 
-                        style="width:100%; height:auto">
-                    </div>
-            
-                 
-                    <button class="carrossel-prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="carrossel-next" onclick="changeSlide(1)">&#10095;</button>
-            
-                  
-                    <div class="carrossel-indicators">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                    </div>
-                </div>
-            
-                <script src="carrossel/carrossel.js"></script>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        </section>
         <script>
             function toggleMenu() {
                 var nav = document.querySelector('nav ul');

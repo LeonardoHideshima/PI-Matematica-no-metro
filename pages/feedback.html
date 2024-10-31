@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="..//images/logo.png">
-    <link rel="stylesheet" href="..//css/style.css">
-    <title>Mapa Interativo</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     
-
     <style>
-          h2 {
-            font-weight: bold;
-            text-align: center;
-            margin: 10px 0;
-            font-size: 1.2em;           
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; 
         }
-    </style>
+           </style>
+    <title>Feedback</title>
 </head>
 <header>
     <h1>Metrô de São Paulo</h1>
@@ -34,54 +33,20 @@
         </ul>
     </nav>
 </header>
-<body>   
-    <title>Estações de Metrô Próximas</title>
-    <!-- Substitua SUA_CHAVE_DE_API_AQUI pela sua chave de API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHE632ab9u-GRkZdXdQWffldL2ygoaXSY&libraries=places"></script>
-</head>
-<body>
-    <h2>Estações de Metrô Próximas - Estação Sacomã</h2>
-    <div id="map" style="height:400px;width:100%;"></div>
-    <div id="status-metro"></div>
-
-    <script>
-        function initMap() {
-            var sacoma = { lat: -23.5895, lng: -46.5913 }; 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 14,
-                center: sacoma
-            });
-
-            var service = new google.maps.places.PlacesService(map);
-            var request = {
-                location: sacoma,
-                radius: '2000', 
-                type: ['subway_station'] 
-            };
-
-            service.nearbySearch(request, function(results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    let statusHTML = '<h3>Estações Encontradas:</h3>';
-                    results.forEach(station => {
-                       
-                        new google.maps.Marker({
-                            position: station.geometry.location,
-                            map: map,
-                            title: station.name
-                        });
-                        
-                        statusHTML += `<p>Estação: ${station.name} - Endereço: ${station.vicinity}</p>`;
-                    });
-                    document.getElementById('status-metro').innerHTML = statusHTML;
-                } else {
-                    document.getElementById('status-metro').innerHTML = 'Nenhuma estação encontrada.';
-                }
-            });
-        }
-
-      
-        window.onload = initMap;
-    </script>
+<body>        
+    <section id="feedback">
+        <h2>Comentários e Avaliações</h2>
+        <form action="process_feedback.php" method="post">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br>
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message" placeholder="Deixe seus comentários" rows="4"
+                required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
     <footer style="background-color: #003b64; color: #fff; padding: 40px 0;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
     

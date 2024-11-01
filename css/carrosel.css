@@ -28,28 +28,28 @@
 
 .item1 {
     animation-delay: calc(30s / 4 * (4 - 1) * -1);
-   background-image:url(/images/mario1.jpg);
+   background-image:url(../images/mat_metro.png);
     background-size: contain;        
     background-repeat: no-repeat; 
     background-position: center;    
 }
 .item2 {
     animation-delay: calc(30s / 4 * (4 - 2) * -1);
-   background-image:url(/images/mario2.png);
+   background-image:url(../images/metro1.png);
     background-size: contain;        
     background-repeat: no-repeat; 
     background-position: center;    
 }
 .item3 {
     animation-delay: calc(30s / 4 * (4 - 3) * -1);
-   background-image:url(/images/mario3.webp);
+   background-image:url(../images/metro2.png);
     background-size: contain;        
     background-repeat: no-repeat; 
     background-position: center;    
 }
 .item4 {
     animation-delay: calc(30s / 4 * (4 - 4) * -1);
-   background-image:url(/images/mat_metro.jpg);
+   background-image:url(../images/metro3.png);
     background-size: contain;        
     background-repeat: no-repeat; 
     background-position: center;    

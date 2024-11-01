@@ -8,3 +8,4 @@ daltonismoSelect.addEventListener('change', function() {
         document.body.classList.add(selectedValue);
     }
 });
+document.body.classList.add(selectedClass);

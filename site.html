@@ -40,28 +40,37 @@
     </header>
 
     <main>
-        <section id="acessibilidade">
-            <h2>Configurações de Acessibilidade</h2>
-            <div>
-                <label for="tema">Escolha o tema de cores:</label>
-                <select id="tema">
-                    <option value="normal">Padrão</option>
-                    <option value="protanopia">Protanopia</option>
-                    <option value="deuteranopia">Deuteranopia</option>
-                    <option value="tritanopia">Tritanopia</option>
-                </select>
-            </div>
+        <select id="daltonismo-select" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+            <option value="">Modo Normal</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+        <div class="daltonismo-container">
+            <button class="filter-button" id="daltonismo-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/245/245428.png" alt="Ícone Daltonismo" style="width: 20px; height: 20px; margin-right: 5px;"> Ativar Daltonismo
+            </button>
             <div vw class="enabled">
                 <div vw-access-button class="active"></div>
                 <div vw-plugin-wrapper>
                     <div class="vw-plugin-top-wrapper"></div>
                 </div>
             </div>
+        </div>
+        
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>
+            
             <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
             <script>
                 new window.VLibras.Widget('https://vlibras.gov.br/app');
             </script>
         </section>
+      
      
             <div class="carrossel">
                 <div class="item item1"></div>
@@ -105,30 +114,9 @@
             var marker = L.marker([-23.5864, -46.6205]).addTo(map)
                 .bindPopup('<b>Estação Sacomã</b><br />Linha 2-Verde').openPopup();
 
-            document.getElementById('tema').addEventListener('change', function () {
-                document.body.className = '';
-                const selectedTheme = this.value;
-                if (selectedTheme !== 'normal') {
-                    document.body.classList.add(selectedTheme);
-                }
-            });
+           
    
         </script>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
-            <defs>
-                <filter id="protanopia">
-                    <feColorMatrix type="matrix"
-                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
-                </filter>
-                <filter id="deuteranopia">
-                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
-                </filter>
-                <filter id="tritanopia">
-                    <feColorMatrix type="matrix"
-                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
-                </filter>
-            </defs>
-        </svg>
     </main>
 
     <footer style="background-color: #003b64; color: #fff; padding: 40px 0;">

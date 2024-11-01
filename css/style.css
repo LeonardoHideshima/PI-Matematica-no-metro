@@ -12,13 +12,14 @@ header {
     align-items: center;
     padding: 20px;
     color: white;
-    background-color: #003b64;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #003b64; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .hamburger {
     display: none;
 }
+
 
 @media (max-width: 768px) {
     .hamburger {
@@ -26,14 +27,13 @@ header {
         font-size: 24px;
         cursor: pointer;
         padding: 10px;
-        background-color: #282a76;
-        color: white;
+        background-color: #282a76; 
+        color: white; 
         border-radius: 5px;
         text-align: center;
         margin: 10px 0;
     }
 }
-
 nav {
     margin: 0;
     padding: 0;
@@ -172,22 +172,20 @@ details {
     text-align: center;
 }
 
-.protanopia {
-    background-color: #fff;
-    color: #000;
-    filter: hue-rotate(-20deg); /* Ajuste específico para protanopia */
+body.protanopia {
+    filter: url(#protanopia);
 }
 
-.deuteranopia {
-    background-color: #fff;
-    color: #000;
-    filter: hue-rotate(-10deg); /* Ajuste específico para deuteranopia */
+body.deuteranopia {
+    filter: url(#deuteranopia);
 }
 
-.tritanopia {
-    background-color: #fff;
-    color: #000;
-    filter: hue-rotate(10deg); /* Ajuste específico para tritanopia */
+body,p,h1,h2,h3,h4,h5,h6,a,span {
+    font-size: 16px;
+}
+
+body.tritanopia {
+    filter: url(#tritanopia);
 }
 
 body.small-font {
@@ -234,34 +232,7 @@ input:checked+label {
     background-color: #ffcc00;
 }
 
+
 svg {
     display: none;
 }
-
-.daltonismo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    margin: 20px 0;
-}
-
-.filter-button {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #0368b1; /* Cor do botão igual ao do botão de Libras */
-    color: white; /* Cor do texto */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    display: flex; /* Para alinhar ícone e texto */
-    align-items: center; /* Alinha o ícone e texto verticalmente */
-}
-
-.filter-button img {
-    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
-}
-
-.filter-button:hover {
-    background-color: #0368b1; /* Cor de fundo ao passar o mouse */
-}
-

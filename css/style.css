@@ -10,10 +10,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px 20px;
     color: white;
     background-color: #003b64; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
 }
 
 .hamburger {
@@ -192,7 +192,7 @@ body.extra-large-font {
 
 .accessibility-options label {
     padding: 10px;
-    background-color: #eee;
+    background-color: #23c8fa;
     margin-right: 10px;
     cursor: pointer;
     border: 1px solid #ddd;
@@ -208,7 +208,7 @@ input:checked+label {
     margin: 5px;
     padding: 10px 20px;
     background-color: #003b64;
-    color: white;
+    color:#23c8fa;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -221,4 +221,21 @@ input:checked+label {
 
 svg {
     display: none;
+}
+
+#daltonismo-select {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #1286e6; 
+    color: white; 
+    border: none;
+    padding: 1px 1px; 
+    border-radius: 1px; 
+    font-size: 14px; 
+    cursor: pointer;
+}
+#daltonismo-select:hover {
+    background-color: #1a72d6; 
 }

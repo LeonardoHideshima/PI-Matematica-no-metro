@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f3f4f6;
     color: #333;
-    background-color: #f4f4f4;
 }
 
 header {
@@ -237,5 +237,20 @@ svg {
     cursor: pointer;
 }
 #daltonismo-select:hover {
-    background-color: #1a72d6; 
+    background-color: #0e6bb4; 
+}
+
+.audio-button {
+    background-color: #1286e6; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #0e6bb4; 
 }

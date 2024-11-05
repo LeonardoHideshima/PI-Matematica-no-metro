@@ -1,0 +1,24 @@
+h1, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 50px;
+}
+section{
+    text-align: center;   
+}
+h2 {
+    background-color: #003b64; 
+    color: #fff;
+    padding: 20px;  
+    width: 100vw;
+    position: relative;
+}
+
+.faq-section {
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}

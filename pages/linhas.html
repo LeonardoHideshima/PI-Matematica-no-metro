@@ -167,48 +167,10 @@
             <div id="map" style="height:400px;width:100%;"></div>
             <div id="directions-panel"></div>
         
-            <script>
-                let map;
-                let directionsService;
-                let directionsRenderer;
-        
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 14,
-                        center: {lat: -23.5895, lng: -46.5913} // Estação Sacomã
-                    });
-        
-                    directionsService = new google.maps.DirectionsService();
-                    directionsRenderer = new google.maps.DirectionsRenderer();
-                    directionsRenderer.setMap(map);
-                    directionsRenderer.setPanel(document.getElementById('directions-panel'));
-                }
-        
-                function calcularRota() {
-                    const origem = document.getElementById('origem').value;
-                    const destino = document.getElementById('destino').value;
-        
-                    const request = {
-                        origin: origem,
-                        destination: destino,
-                        travelMode: 'TRANSIT', 
-                        transitOptions: {
-                            modes: ['SUBWAY'] 
-                        }
-                    };
-        
-                    directionsService.route(request, function(result, status) {
-                        if (status === 'OK') {
-                            directionsRenderer.setDirections(result);
-                        } else {
-                            alert('Não foi possível calcular a rota: ' + status);
-                        }
-                    });
-                }
-        
-                window.onload = initMap;
-            </script>
-            <script>
+            <script src="../js/linhas.js"></script>
+
+
+        <script>
                 function toggleMenu() {
                     var nav = document.querySelector('nav ul');
                     if (nav.style.display === 'block') {
@@ -219,8 +181,8 @@
                 }
             const daltonismoSelect = document.getElementById('daltonismo-select');
     
-            </script>
-            <script src="../js/acessibilidade.js"></script>
+        </script>
+        <script src="../js/acessibilidade.js"></script>
        
         <footer style="background-color: #003b64; color: #fff; padding: 40px 0;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
@@ -260,7 +222,7 @@
         
      
             <div style="text-align: center; padding-top: 10px; border-top: 1px solid #ffffff; margin-top: 20px;">
-                <p>&copy; 2024 Instituto Mauá de Tecnologia. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Instituto Mauá de Tecnologia. Todos os direitos reservados</p>
             </div>
         </footer>
          

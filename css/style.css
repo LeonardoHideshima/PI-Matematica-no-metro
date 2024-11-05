@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6;
+    background-color: #f8f9fa;
     color: #333;
 }
 
@@ -27,7 +27,7 @@ header {
         font-size: 24px;
         cursor: pointer;
         padding: 10px;
-        background-color: #282a76; 
+        background-color: #003b64; 
         color: white; 
         border-radius: 5px;
         text-align: center;

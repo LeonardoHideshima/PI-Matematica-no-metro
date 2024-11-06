@@ -16,6 +16,12 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
 }
 
+h1 {
+    font-size: 20px; 
+    margin: 0;
+    white-space: nowrap; 
+}
+
 .hamburger {
     display: none;
 }
@@ -254,3 +260,16 @@ svg {
 .audio-button:hover {
     background-color: #0e6bb4; 
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px !important; 
+    height: 100px !important;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
